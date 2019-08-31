@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Hello World</span>
+      <span style = "flex: 1 1;"></span>
+      <button mat-raised-button color="warn">
+          <mat-icon>android</mat-icon>
+      </button>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>
+          Username
+        </mat-label>
+        <input matInput [(ngModel)]="username"/>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+          <mat-label>
+            Password
+          </mat-label>
+          <input matInput [(ngModel)]="password" type = "password"/>
+        </mat-form-field>
+
+    </mat-card-content>
+    <button mat-raised-button color = "accent">Login</button>
+  </mat-card>
+
+  <h1>
+   Your username is: {{username}} <br>
+   Your password is: {{password}} <br>
+   Your username and password is: {{getUserAndpass()}}
+  </h1>
+
